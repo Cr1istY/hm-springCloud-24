@@ -2,6 +2,7 @@ package com.itheima.mp.controller;
 
 
 import com.itheima.mp.domain.dto.UserFormDTO;
+import com.itheima.mp.domain.query.UserQuery;
 import com.itheima.mp.domain.vo.UserVO;
 import com.itheima.mp.service.IUserService;
 import io.swagger.annotations.Api;
@@ -39,13 +40,19 @@ public class UserController {
     @GetMapping("/{id}")
     @ApiOperation("查询用户")
     public UserVO getUser(@ApiParam("id") @PathVariable("id") Long id) {
-        return userService.getUser(id);
+        return userService.queryUserAndAddressById(id);
     }
 
     @GetMapping
     @ApiOperation("查询用户列表")
     public List<UserVO> queryUserByIds(@ApiParam("用户id列表") @RequestParam("ids") List<Long> ids) {
         return userService.queryUserByIds(ids);
+    }
+
+    @GetMapping("/list")
+    @ApiOperation("根据复杂条件查询用户列表")
+    public List<UserVO> queryUser(UserQuery userQuery) {
+        return userService.queryUser(userQuery);
     }
 
     @PutMapping
