@@ -1,6 +1,7 @@
 package com.itheima.mp.controller;
 
 
+import com.itheima.mp.domain.dto.PageDTO;
 import com.itheima.mp.domain.dto.UserFormDTO;
 import com.itheima.mp.domain.query.UserQuery;
 import com.itheima.mp.domain.vo.UserVO;
@@ -46,7 +47,7 @@ public class UserController {
     @GetMapping
     @ApiOperation("查询用户列表")
     public List<UserVO> queryUserByIds(@ApiParam("用户id列表") @RequestParam("ids") List<Long> ids) {
-        return userService.queryUserByIds(ids);
+        return userService.queryUserAndAddressByIds(ids);
     }
 
     @GetMapping("/list")
@@ -61,5 +62,12 @@ public class UserController {
                                 @ApiParam("金额") @RequestParam("money") Integer money) {
         userService.deductMoneyById(id, money);
     }
+
+    @GetMapping("/page")
+    @ApiOperation("根据复杂条件分页查询用户列表")
+    public PageDTO<UserVO> queryUserPage(UserQuery userQuery) {
+        return userService.queryUserPage(userQuery);
+    }
+
 
 }

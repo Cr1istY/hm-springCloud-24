@@ -1,6 +1,7 @@
 package com.itheima.mp.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.itheima.mp.domain.dto.PageDTO;
 import com.itheima.mp.domain.dto.UserFormDTO;
 import com.itheima.mp.domain.po.User;
 import com.itheima.mp.domain.query.UserQuery;
@@ -22,4 +23,8 @@ public interface IUserService extends IService<User> {
     List<UserVO> queryUser(UserQuery userQuery);
 
     UserVO queryUserAndAddressById(Long id);
+
+    List<UserVO> queryUserAndAddressByIds(List<Long> ids);
+
+    PageDTO<UserVO> queryUserPage(UserQuery userQuery);
 }

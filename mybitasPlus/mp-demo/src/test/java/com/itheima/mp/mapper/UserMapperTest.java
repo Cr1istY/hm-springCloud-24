@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.kotlin.KtQueryWrapper;
 import com.itheima.mp.domain.po.User;
+import com.itheima.mp.domain.po.UserInfo;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -50,7 +51,8 @@ class UserMapperTest {
         user.setPassword("123");
         user.setPhone("18688990011");
         user.setBalance(200);
-        user.setInfo("{\"age\": 20, \"intro\": \"语文老师\", \"gender\": \"male\"}");
+//        user.setInfo("{\"age\": 20, \"intro\": \"语文老师\", \"gender\": \"male\"}");
+        user.setInfo(UserInfo.of(20, "语文老师", "male"));
         user.setCreateTime(LocalDateTime.now());
         user.setUpdateTime(LocalDateTime.now());
         userMapper.insert(user);

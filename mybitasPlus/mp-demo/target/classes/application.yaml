@@ -15,6 +15,10 @@ mybatis-plus:
     db-config:
       id-type: auto
       update-strategy: not_null
+      logic-delete-field: deleted
+  configuration:
+    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
+
 
 knife4j:
   enable: true
