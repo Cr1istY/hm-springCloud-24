@@ -1,0 +1,208 @@
+09:35:06:181  INFO 31488 --- [main] com.hmall.HMallApplication               : Starting HMallApplication using Java 11.0.12 on Mr-Y with PID 31488 (D:\future\Java\StartofDream\hmall\hm-service\target\classes started by crist yang in D:\future\Java\StartofDream\hmall)
+09:35:06:186 DEBUG 31488 --- [main] com.hmall.HMallApplication               : Running with Spring Boot v2.7.12, Spring v5.3.27
+09:35:06:186  INFO 31488 --- [main] com.hmall.HMallApplication               : The following 1 profile is active: "local"
+09:35:06:908  INFO 31488 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+09:35:06:911  INFO 31488 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+09:35:06:950  INFO 31488 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+09:35:07:325  INFO 31488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+09:35:07:332  INFO 31488 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+09:35:07:332  INFO 31488 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+09:35:07:445  INFO 31488 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+09:35:07:445  INFO 31488 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1212 ms
+09:35:09:471  INFO 31488 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+09:35:09:741  INFO 31488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+09:35:09:742  INFO 31488 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+09:35:09:743  INFO 31488 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+09:35:09:761  INFO 31488 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+09:35:09:870  INFO 31488 --- [main] com.hmall.HMallApplication               : Started HMallApplication in 4.057 seconds (JVM running for 5.412)
+09:35:16:122  INFO 31488 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:35:16:123  INFO 31488 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+09:35:16:124  INFO 31488 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+09:35:16:244  INFO 31488 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+09:35:16:456  INFO 31488 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+09:35:16:461 DEBUG 31488 --- [http-nio-8080-exec-1] com.hmall.mapper.UserMapper.selectOne    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+09:35:16:473 DEBUG 31488 --- [http-nio-8080-exec-1] com.hmall.mapper.UserMapper.selectOne    : ==> Parameters: jack(String)
+09:35:16:492 DEBUG 31488 --- [http-nio-8080-exec-1] com.hmall.mapper.UserMapper.selectOne    : <==      Total: 1
+09:35:16:912 DEBUG 31488 --- [http-nio-8080-exec-5] c.h.m.ItemMapper.selectPage_mpCount      : ==>  Preparing: SELECT COUNT(*) FROM item WHERE (status = ?)
+09:35:16:913 DEBUG 31488 --- [http-nio-8080-exec-5] c.h.m.ItemMapper.selectPage_mpCount      : ==> Parameters: 1(Integer)
+09:35:17:007 DEBUG 31488 --- [http-nio-8080-exec-5] c.h.m.ItemMapper.selectPage_mpCount      : <==      Total: 1
+09:35:17:015 DEBUG 31488 --- [http-nio-8080-exec-5] com.hmall.mapper.ItemMapper.selectPage   : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+09:35:17:016 DEBUG 31488 --- [http-nio-8080-exec-5] com.hmall.mapper.ItemMapper.selectPage   : ==> Parameters: 1(Integer), 20(Long)
+09:35:17:533 DEBUG 31488 --- [http-nio-8080-exec-5] com.hmall.mapper.ItemMapper.selectPage   : <==      Total: 20
+09:35:23:599 DEBUG 31488 --- [http-nio-8080-exec-2] com.hmall.mapper.CartMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
+09:35:23:600 DEBUG 31488 --- [http-nio-8080-exec-2] com.hmall.mapper.CartMapper.selectCount  : ==> Parameters: 1(Long), 100001511821(Long)
+09:35:23:604 DEBUG 31488 --- [http-nio-8080-exec-2] com.hmall.mapper.CartMapper.selectCount  : <==      Total: 1
+09:35:23:605 DEBUG 31488 --- [http-nio-8080-exec-2] com.hmall.mapper.CartMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
+09:35:23:605 DEBUG 31488 --- [http-nio-8080-exec-2] com.hmall.mapper.CartMapper.selectCount  : ==> Parameters: 1(Long)
+09:35:23:606 DEBUG 31488 --- [http-nio-8080-exec-2] com.hmall.mapper.CartMapper.selectCount  : <==      Total: 1
+09:35:23:608 DEBUG 31488 --- [http-nio-8080-exec-2] com.hmall.mapper.CartMapper.insert       : ==>  Preparing: INSERT INTO cart ( user_id, item_id, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ? )
+09:35:23:608 DEBUG 31488 --- [http-nio-8080-exec-2] com.hmall.mapper.CartMapper.insert       : ==> Parameters: 1(Long), 100001511821(Long), HMDIME 牛仔背带裤女2018秋冬新品 韩版学院风潮流百搭弹力修身补丁学生吊带长裤女 AXNZ369 深蓝 30(String), {"颜色": "蓝色", "尺码": "30"}(String), 13700(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t30892/263/313055374/557791/c98e9abc/5bef811aN036f7c3b.jpg!q70.jpg.webp(String)
+09:35:23:613 DEBUG 31488 --- [http-nio-8080-exec-2] com.hmall.mapper.CartMapper.insert       : <==    Updates: 1
+09:35:23:776 DEBUG 31488 --- [http-nio-8080-exec-6] com.hmall.mapper.CartMapper.selectList   : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+09:35:23:777 DEBUG 31488 --- [http-nio-8080-exec-6] com.hmall.mapper.CartMapper.selectList   : ==> Parameters: 1(Long)
+09:35:23:779 DEBUG 31488 --- [http-nio-8080-exec-6] com.hmall.mapper.CartMapper.selectList   : <==      Total: 1
+09:35:23:784 DEBUG 31488 --- [http-nio-8080-exec-6] c.h.mapper.ItemMapper.selectBatchIds     : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+09:35:23:784 DEBUG 31488 --- [http-nio-8080-exec-6] c.h.mapper.ItemMapper.selectBatchIds     : ==> Parameters: 100001511821(Long)
+09:35:23:786 DEBUG 31488 --- [http-nio-8080-exec-6] c.h.mapper.ItemMapper.selectBatchIds     : <==      Total: 1
+09:37:07:787 DEBUG 31488 --- [http-nio-8080-exec-4] c.hmall.mapper.AddressMapper.selectList  : ==>  Preparing: SELECT id,user_id,province,city,town,mobile,street,contact,is_default,notes FROM address WHERE (user_id = ?)
+09:37:07:788 DEBUG 31488 --- [http-nio-8080-exec-4] c.hmall.mapper.AddressMapper.selectList  : ==> Parameters: 1(Long)
+09:37:07:792 DEBUG 31488 --- [http-nio-8080-exec-4] c.hmall.mapper.AddressMapper.selectList  : <==      Total: 4
+09:37:09:484 DEBUG 31488 --- [http-nio-8080-exec-3] c.h.mapper.ItemMapper.selectBatchIds     : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+09:37:09:485 DEBUG 31488 --- [http-nio-8080-exec-3] c.h.mapper.ItemMapper.selectBatchIds     : ==> Parameters: 100001511821(Long)
+09:37:09:486 DEBUG 31488 --- [http-nio-8080-exec-3] c.h.mapper.ItemMapper.selectBatchIds     : <==      Total: 1
+09:37:09:489 DEBUG 31488 --- [http-nio-8080-exec-3] com.hmall.mapper.OrderMapper.insert      : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+09:37:09:491 DEBUG 31488 --- [http-nio-8080-exec-3] com.hmall.mapper.OrderMapper.insert      : ==> Parameters: 1951094820653596674(Long), 13700(Integer), 3(Integer), 1(Long), 1(Integer)
+09:37:09:494 DEBUG 31488 --- [http-nio-8080-exec-3] com.hmall.mapper.OrderMapper.insert      : <==    Updates: 1
+09:37:09:498 DEBUG 31488 --- [http-nio-8080-exec-3] c.hmall.mapper.OrderDetailMapper.insert  : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+09:37:09:499 DEBUG 31488 --- [http-nio-8080-exec-3] c.hmall.mapper.OrderDetailMapper.insert  : ==> Parameters: 1951094820653596674(Long), 100001511821(Long), 1(Integer), HMDIME 牛仔背带裤女2018秋冬新品 韩版学院风潮流百搭弹力修身补丁学生吊带长裤女 AXNZ369 深蓝 30(String), {"颜色": "蓝色", "尺码": "30"}(String), 13700(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t30892/263/313055374/557791/c98e9abc/5bef811aN036f7c3b.jpg!q70.jpg.webp(String)
+09:37:09:504 DEBUG 31488 --- [http-nio-8080-exec-3] com.hmall.mapper.CartMapper.delete       : ==>  Preparing: DELETE FROM cart WHERE (user_id = ? AND item_id IN (?))
+09:37:09:504 DEBUG 31488 --- [http-nio-8080-exec-3] com.hmall.mapper.CartMapper.delete       : ==> Parameters: 1(Long), 100001511821(Long)
+09:37:09:506 DEBUG 31488 --- [http-nio-8080-exec-3] com.hmall.mapper.CartMapper.delete       : <==    Updates: 1
+09:37:09:506 DEBUG 31488 --- [http-nio-8080-exec-3] com.hmall.mapper.ItemMapper.updateStock  : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+09:37:09:507 DEBUG 31488 --- [http-nio-8080-exec-3] com.hmall.mapper.ItemMapper.updateStock  : ==> Parameters: 1(Integer), 100001511821(Long)
+09:37:09:692 DEBUG 31488 --- [http-nio-8080-exec-9] com.hmall.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+09:37:09:692 DEBUG 31488 --- [http-nio-8080-exec-9] com.hmall.mapper.OrderMapper.selectById  : ==> Parameters: 1951094820653596674(Long)
+09:37:09:694 DEBUG 31488 --- [http-nio-8080-exec-9] com.hmall.mapper.OrderMapper.selectById  : <==      Total: 1
+09:37:09:716 DEBUG 31488 --- [http-nio-8080-exec-7] c.hmall.mapper.PayOrderMapper.selectOne  : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE (biz_order_no = ?)
+09:37:09:717 DEBUG 31488 --- [http-nio-8080-exec-7] c.hmall.mapper.PayOrderMapper.selectOne  : ==> Parameters: 1951094820653596674(Long)
+09:37:09:720 DEBUG 31488 --- [http-nio-8080-exec-7] c.hmall.mapper.PayOrderMapper.selectOne  : <==      Total: 0
+09:37:09:723 DEBUG 31488 --- [http-nio-8080-exec-7] com.hmall.mapper.PayOrderMapper.insert   : ==>  Preparing: INSERT INTO pay_order ( id, biz_order_no, pay_order_no, biz_user_id, pay_channel_code, amount, pay_type, status, pay_over_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+09:37:09:726 DEBUG 31488 --- [http-nio-8080-exec-7] com.hmall.mapper.PayOrderMapper.insert   : ==> Parameters: 1951094821576343554(Long), 1951094820653596674(Long), 1951094821576343553(Long), 1(Long), balance(String), 13700(Integer), 5(Integer), 1(Integer), 2025-08-01T11:37:09.721705400(LocalDateTime)
+09:37:09:729 DEBUG 31488 --- [http-nio-8080-exec-7] com.hmall.mapper.PayOrderMapper.insert   : <==    Updates: 1
+09:37:21:797 DEBUG 31488 --- [http-nio-8080-exec-8] c.h.mapper.PayOrderMapper.selectById     : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE id=?
+09:37:21:798 DEBUG 31488 --- [http-nio-8080-exec-8] c.h.mapper.PayOrderMapper.selectById     : ==> Parameters: 1951094821576343554(Long)
+09:37:21:800 DEBUG 31488 --- [http-nio-8080-exec-8] c.h.mapper.PayOrderMapper.selectById     : <==      Total: 1
+09:37:21:801  INFO 31488 --- [http-nio-8080-exec-8] com.hmall.service.impl.UserServiceImpl   : 开始扣款
+09:37:21:801 DEBUG 31488 --- [http-nio-8080-exec-8] com.hmall.mapper.UserMapper.selectById   : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE id=?
+09:37:21:801 DEBUG 31488 --- [http-nio-8080-exec-8] com.hmall.mapper.UserMapper.selectById   : ==> Parameters: 1(Long)
+09:37:21:803 DEBUG 31488 --- [http-nio-8080-exec-8] com.hmall.mapper.UserMapper.selectById   : <==      Total: 1
+09:37:21:880 DEBUG 31488 --- [http-nio-8080-exec-8] com.hmall.mapper.UserMapper.updateMoney  : ==>  Preparing: update user set balance = balance - 13700 where id = ?
+09:37:21:880 DEBUG 31488 --- [http-nio-8080-exec-8] com.hmall.mapper.UserMapper.updateMoney  : ==> Parameters: 1(Long)
+09:37:21:882 DEBUG 31488 --- [http-nio-8080-exec-8] com.hmall.mapper.UserMapper.updateMoney  : <==    Updates: 1
+09:37:21:883  INFO 31488 --- [http-nio-8080-exec-8] com.hmall.service.impl.UserServiceImpl   : 扣款成功
+09:37:21:887 DEBUG 31488 --- [http-nio-8080-exec-8] com.hmall.mapper.PayOrderMapper.update   : ==>  Preparing: UPDATE pay_order SET status=?,pay_success_time=? WHERE (id = ? AND status IN (?,?))
+09:37:21:888 DEBUG 31488 --- [http-nio-8080-exec-8] com.hmall.mapper.PayOrderMapper.update   : ==> Parameters: 3(Integer), 2025-08-01T09:37:21.883620700(LocalDateTime), 1951094821576343554(Long), 0(Integer), 1(Integer)
+09:37:21:890 DEBUG 31488 --- [http-nio-8080-exec-8] com.hmall.mapper.PayOrderMapper.update   : <==    Updates: 1
+09:37:21:893 DEBUG 31488 --- [http-nio-8080-exec-8] com.hmall.mapper.OrderMapper.updateById  : ==>  Preparing: UPDATE `order` SET status=?, pay_time=? WHERE id=?
+09:37:21:894 DEBUG 31488 --- [http-nio-8080-exec-8] com.hmall.mapper.OrderMapper.updateById  : ==> Parameters: 2(Integer), 2025-08-01T09:37:21.890296900(LocalDateTime), 1951094820653596674(Long)
+09:37:21:895 DEBUG 31488 --- [http-nio-8080-exec-8] com.hmall.mapper.OrderMapper.updateById  : <==    Updates: 1
+09:37:22:051 DEBUG 31488 --- [http-nio-8080-exec-10] com.hmall.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+09:37:22:052 DEBUG 31488 --- [http-nio-8080-exec-10] com.hmall.mapper.OrderMapper.selectById  : ==> Parameters: 1951094820653596674(Long)
+09:37:22:054 DEBUG 31488 --- [http-nio-8080-exec-10] com.hmall.mapper.OrderMapper.selectById  : <==      Total: 1
+09:37:27:521 DEBUG 31488 --- [http-nio-8080-exec-1] com.hmall.mapper.CartMapper.selectList   : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+09:37:27:522 DEBUG 31488 --- [http-nio-8080-exec-1] com.hmall.mapper.CartMapper.selectList   : ==> Parameters: 1(Long)
+09:37:27:523 DEBUG 31488 --- [http-nio-8080-exec-1] com.hmall.mapper.CartMapper.selectList   : <==      Total: 0
+09:39:20:784 DEBUG 31488 --- [http-nio-8080-exec-5] c.h.m.ItemMapper.selectPage_mpCount      : ==>  Preparing: SELECT COUNT(*) FROM item WHERE (status = ?)
+09:39:20:785 DEBUG 31488 --- [http-nio-8080-exec-5] c.h.m.ItemMapper.selectPage_mpCount      : ==> Parameters: 1(Integer)
+09:39:20:799 DEBUG 31488 --- [http-nio-8080-exec-5] c.h.m.ItemMapper.selectPage_mpCount      : <==      Total: 1
+09:39:20:802 DEBUG 31488 --- [http-nio-8080-exec-5] com.hmall.mapper.ItemMapper.selectPage   : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+09:39:20:802 DEBUG 31488 --- [http-nio-8080-exec-5] com.hmall.mapper.ItemMapper.selectPage   : ==> Parameters: 1(Integer), 20(Long)
+09:39:20:933 DEBUG 31488 --- [http-nio-8080-exec-5] com.hmall.mapper.ItemMapper.selectPage   : <==      Total: 20
+09:39:23:787 DEBUG 31488 --- [http-nio-8080-exec-2] c.hmall.mapper.AddressMapper.selectList  : ==>  Preparing: SELECT id,user_id,province,city,town,mobile,street,contact,is_default,notes FROM address WHERE (user_id = ?)
+09:39:23:788 DEBUG 31488 --- [http-nio-8080-exec-2] c.hmall.mapper.AddressMapper.selectList  : ==> Parameters: 1(Long)
+09:39:23:790 DEBUG 31488 --- [http-nio-8080-exec-2] c.hmall.mapper.AddressMapper.selectList  : <==      Total: 4
+09:39:33:439 DEBUG 31488 --- [http-nio-8080-exec-6] com.hmall.mapper.CartMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
+09:39:33:439 DEBUG 31488 --- [http-nio-8080-exec-6] com.hmall.mapper.CartMapper.selectCount  : ==> Parameters: 1(Long), 14741770661(Long)
+09:39:33:440 DEBUG 31488 --- [http-nio-8080-exec-6] com.hmall.mapper.CartMapper.selectCount  : <==      Total: 1
+09:39:33:442 DEBUG 31488 --- [http-nio-8080-exec-6] com.hmall.mapper.CartMapper.selectCount  : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
+09:39:33:442 DEBUG 31488 --- [http-nio-8080-exec-6] com.hmall.mapper.CartMapper.selectCount  : ==> Parameters: 1(Long)
+09:39:33:443 DEBUG 31488 --- [http-nio-8080-exec-6] com.hmall.mapper.CartMapper.selectCount  : <==      Total: 1
+09:39:33:444 DEBUG 31488 --- [http-nio-8080-exec-6] com.hmall.mapper.CartMapper.insert       : ==>  Preparing: INSERT INTO cart ( user_id, item_id, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ? )
+09:39:33:445 DEBUG 31488 --- [http-nio-8080-exec-6] com.hmall.mapper.CartMapper.insert       : ==> Parameters: 1(Long), 14741770661(Long), 康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视(String), {}(String), 144600(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp(String)
+09:39:33:448 DEBUG 31488 --- [http-nio-8080-exec-6] com.hmall.mapper.CartMapper.insert       : <==    Updates: 1
+09:39:33:611 DEBUG 31488 --- [http-nio-8080-exec-4] com.hmall.mapper.CartMapper.selectList   : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+09:39:33:612 DEBUG 31488 --- [http-nio-8080-exec-4] com.hmall.mapper.CartMapper.selectList   : ==> Parameters: 1(Long)
+09:39:33:614 DEBUG 31488 --- [http-nio-8080-exec-4] com.hmall.mapper.CartMapper.selectList   : <==      Total: 1
+09:39:33:615 DEBUG 31488 --- [http-nio-8080-exec-4] c.h.mapper.ItemMapper.selectBatchIds     : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+09:39:33:615 DEBUG 31488 --- [http-nio-8080-exec-4] c.h.mapper.ItemMapper.selectBatchIds     : ==> Parameters: 14741770661(Long)
+09:39:33:616 DEBUG 31488 --- [http-nio-8080-exec-4] c.h.mapper.ItemMapper.selectBatchIds     : <==      Total: 1
+09:39:35:055 DEBUG 31488 --- [http-nio-8080-exec-3] c.hmall.mapper.AddressMapper.selectList  : ==>  Preparing: SELECT id,user_id,province,city,town,mobile,street,contact,is_default,notes FROM address WHERE (user_id = ?)
+09:39:35:056 DEBUG 31488 --- [http-nio-8080-exec-3] c.hmall.mapper.AddressMapper.selectList  : ==> Parameters: 1(Long)
+09:39:35:058 DEBUG 31488 --- [http-nio-8080-exec-3] c.hmall.mapper.AddressMapper.selectList  : <==      Total: 4
+09:39:36:544 DEBUG 31488 --- [http-nio-8080-exec-9] c.h.mapper.ItemMapper.selectBatchIds     : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+09:39:36:545 DEBUG 31488 --- [http-nio-8080-exec-9] c.h.mapper.ItemMapper.selectBatchIds     : ==> Parameters: 14741770661(Long)
+09:39:36:548 DEBUG 31488 --- [http-nio-8080-exec-9] c.h.mapper.ItemMapper.selectBatchIds     : <==      Total: 1
+09:39:36:549 DEBUG 31488 --- [http-nio-8080-exec-9] com.hmall.mapper.OrderMapper.insert      : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+09:39:36:550 DEBUG 31488 --- [http-nio-8080-exec-9] com.hmall.mapper.OrderMapper.insert      : ==> Parameters: 1951095437451165698(Long), 144600(Integer), 3(Integer), 1(Long), 1(Integer)
+09:39:36:553 DEBUG 31488 --- [http-nio-8080-exec-9] com.hmall.mapper.OrderMapper.insert      : <==    Updates: 1
+09:39:36:554 DEBUG 31488 --- [http-nio-8080-exec-9] c.hmall.mapper.OrderDetailMapper.insert  : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+09:39:36:554 DEBUG 31488 --- [http-nio-8080-exec-9] c.hmall.mapper.OrderDetailMapper.insert  : ==> Parameters: 1951095437451165698(Long), 14741770661(Long), 1(Integer), 康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视(String), {}(String), 144600(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp(String)
+09:39:36:558 DEBUG 31488 --- [http-nio-8080-exec-9] com.hmall.mapper.CartMapper.delete       : ==>  Preparing: DELETE FROM cart WHERE (user_id = ? AND item_id IN (?))
+09:39:36:559 DEBUG 31488 --- [http-nio-8080-exec-9] com.hmall.mapper.CartMapper.delete       : ==> Parameters: 1(Long), 14741770661(Long)
+09:39:36:562 DEBUG 31488 --- [http-nio-8080-exec-9] com.hmall.mapper.CartMapper.delete       : <==    Updates: 1
+09:39:36:562 DEBUG 31488 --- [http-nio-8080-exec-9] com.hmall.mapper.ItemMapper.updateStock  : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+09:39:36:563 DEBUG 31488 --- [http-nio-8080-exec-9] com.hmall.mapper.ItemMapper.updateStock  : ==> Parameters: 1(Integer), 14741770661(Long)
+09:39:36:787 DEBUG 31488 --- [http-nio-8080-exec-7] com.hmall.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+09:39:36:787 DEBUG 31488 --- [http-nio-8080-exec-7] com.hmall.mapper.OrderMapper.selectById  : ==> Parameters: 1951095437451165698(Long)
+09:39:36:789 DEBUG 31488 --- [http-nio-8080-exec-7] com.hmall.mapper.OrderMapper.selectById  : <==      Total: 1
+09:39:36:808 DEBUG 31488 --- [http-nio-8080-exec-8] c.hmall.mapper.PayOrderMapper.selectOne  : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE (biz_order_no = ?)
+09:39:36:808 DEBUG 31488 --- [http-nio-8080-exec-8] c.hmall.mapper.PayOrderMapper.selectOne  : ==> Parameters: 1951095437451165698(Long)
+09:39:36:810 DEBUG 31488 --- [http-nio-8080-exec-8] c.hmall.mapper.PayOrderMapper.selectOne  : <==      Total: 0
+09:39:36:812 DEBUG 31488 --- [http-nio-8080-exec-8] com.hmall.mapper.PayOrderMapper.insert   : ==>  Preparing: INSERT INTO pay_order ( id, biz_order_no, pay_order_no, biz_user_id, pay_channel_code, amount, pay_type, status, pay_over_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+09:39:36:812 DEBUG 31488 --- [http-nio-8080-exec-8] com.hmall.mapper.PayOrderMapper.insert   : ==> Parameters: 1951095438566850562(Long), 1951095437451165698(Long), 1951095438566850561(Long), 1(Long), balance(String), 144600(Integer), 5(Integer), 1(Integer), 2025-08-01T11:39:36.811250800(LocalDateTime)
+09:39:36:816 DEBUG 31488 --- [http-nio-8080-exec-8] com.hmall.mapper.PayOrderMapper.insert   : <==    Updates: 1
+09:39:39:596 DEBUG 31488 --- [http-nio-8080-exec-10] c.h.mapper.PayOrderMapper.selectById     : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE id=?
+09:39:39:596 DEBUG 31488 --- [http-nio-8080-exec-10] c.h.mapper.PayOrderMapper.selectById     : ==> Parameters: 1951095438566850562(Long)
+09:39:39:599 DEBUG 31488 --- [http-nio-8080-exec-10] c.h.mapper.PayOrderMapper.selectById     : <==      Total: 1
+09:39:39:599  INFO 31488 --- [http-nio-8080-exec-10] com.hmall.service.impl.UserServiceImpl   : 开始扣款
+09:39:39:599 DEBUG 31488 --- [http-nio-8080-exec-10] com.hmall.mapper.UserMapper.selectById   : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE id=?
+09:39:39:599 DEBUG 31488 --- [http-nio-8080-exec-10] com.hmall.mapper.UserMapper.selectById   : ==> Parameters: 1(Long)
+09:39:39:601 DEBUG 31488 --- [http-nio-8080-exec-10] com.hmall.mapper.UserMapper.selectById   : <==      Total: 1
+09:39:39:679 DEBUG 31488 --- [http-nio-8080-exec-10] com.hmall.mapper.UserMapper.updateMoney  : ==>  Preparing: update user set balance = balance - 144600 where id = ?
+09:39:39:680 DEBUG 31488 --- [http-nio-8080-exec-10] com.hmall.mapper.UserMapper.updateMoney  : ==> Parameters: 1(Long)
+09:39:39:681 DEBUG 31488 --- [http-nio-8080-exec-10] com.hmall.mapper.UserMapper.updateMoney  : <==    Updates: 1
+09:39:39:682  INFO 31488 --- [http-nio-8080-exec-10] com.hmall.service.impl.UserServiceImpl   : 扣款成功
+09:39:39:684 DEBUG 31488 --- [http-nio-8080-exec-10] com.hmall.mapper.PayOrderMapper.update   : ==>  Preparing: UPDATE pay_order SET status=?,pay_success_time=? WHERE (id = ? AND status IN (?,?))
+09:39:39:685 DEBUG 31488 --- [http-nio-8080-exec-10] com.hmall.mapper.PayOrderMapper.update   : ==> Parameters: 3(Integer), 2025-08-01T09:39:39.682249500(LocalDateTime), 1951095438566850562(Long), 0(Integer), 1(Integer)
+09:39:39:686 DEBUG 31488 --- [http-nio-8080-exec-10] com.hmall.mapper.PayOrderMapper.update   : <==    Updates: 1
+09:39:39:688 DEBUG 31488 --- [http-nio-8080-exec-10] com.hmall.mapper.OrderMapper.updateById  : ==>  Preparing: UPDATE `order` SET status=?, pay_time=? WHERE id=?
+09:39:39:688 DEBUG 31488 --- [http-nio-8080-exec-10] com.hmall.mapper.OrderMapper.updateById  : ==> Parameters: 2(Integer), 2025-08-01T09:39:39.687459900(LocalDateTime), 1951095437451165698(Long)
+09:39:39:690 DEBUG 31488 --- [http-nio-8080-exec-10] com.hmall.mapper.OrderMapper.updateById  : <==    Updates: 1
+09:39:39:866 DEBUG 31488 --- [http-nio-8080-exec-1] com.hmall.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+09:39:39:866 DEBUG 31488 --- [http-nio-8080-exec-1] com.hmall.mapper.OrderMapper.selectById  : ==> Parameters: 1951095437451165698(Long)
+09:39:39:868 DEBUG 31488 --- [http-nio-8080-exec-1] com.hmall.mapper.OrderMapper.selectById  : <==      Total: 1
+09:39:43:051 DEBUG 31488 --- [http-nio-8080-exec-5] com.hmall.mapper.CartMapper.selectList   : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+09:39:43:051 DEBUG 31488 --- [http-nio-8080-exec-5] com.hmall.mapper.CartMapper.selectList   : ==> Parameters: 1(Long)
+09:39:43:052 DEBUG 31488 --- [http-nio-8080-exec-5] com.hmall.mapper.CartMapper.selectList   : <==      Total: 0
+09:40:03:706 DEBUG 31488 --- [http-nio-8080-exec-2] com.hmall.mapper.CartMapper.selectList   : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+09:40:03:707 DEBUG 31488 --- [http-nio-8080-exec-2] com.hmall.mapper.CartMapper.selectList   : ==> Parameters: 1(Long)
+09:40:03:708 DEBUG 31488 --- [http-nio-8080-exec-2] com.hmall.mapper.CartMapper.selectList   : <==      Total: 0
+09:40:04:640 DEBUG 31488 --- [http-nio-8080-exec-6] c.h.m.ItemMapper.selectPage_mpCount      : ==>  Preparing: SELECT COUNT(*) FROM item WHERE (status = ?)
+09:40:04:640 DEBUG 31488 --- [http-nio-8080-exec-6] c.h.m.ItemMapper.selectPage_mpCount      : ==> Parameters: 1(Integer)
+09:40:04:657 DEBUG 31488 --- [http-nio-8080-exec-6] c.h.m.ItemMapper.selectPage_mpCount      : <==      Total: 1
+09:40:04:659 DEBUG 31488 --- [http-nio-8080-exec-6] com.hmall.mapper.ItemMapper.selectPage   : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+09:40:04:659 DEBUG 31488 --- [http-nio-8080-exec-6] com.hmall.mapper.ItemMapper.selectPage   : ==> Parameters: 1(Integer), 20(Long)
+09:40:04:796 DEBUG 31488 --- [http-nio-8080-exec-6] com.hmall.mapper.ItemMapper.selectPage   : <==      Total: 20
+09:40:07:570 DEBUG 31488 --- [http-nio-8080-exec-4] c.hmall.mapper.AddressMapper.selectList  : ==>  Preparing: SELECT id,user_id,province,city,town,mobile,street,contact,is_default,notes FROM address WHERE (user_id = ?)
+09:40:07:570 DEBUG 31488 --- [http-nio-8080-exec-4] c.hmall.mapper.AddressMapper.selectList  : ==> Parameters: 1(Long)
+09:40:07:573 DEBUG 31488 --- [http-nio-8080-exec-4] c.hmall.mapper.AddressMapper.selectList  : <==      Total: 4
+09:40:13:806 DEBUG 31488 --- [http-nio-8080-exec-3] c.h.mapper.ItemMapper.selectBatchIds     : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+09:40:13:807 DEBUG 31488 --- [http-nio-8080-exec-3] c.h.mapper.ItemMapper.selectBatchIds     : ==> Parameters: 14741770661(Long)
+09:40:13:808 DEBUG 31488 --- [http-nio-8080-exec-3] c.h.mapper.ItemMapper.selectBatchIds     : <==      Total: 1
+09:40:13:809 DEBUG 31488 --- [http-nio-8080-exec-3] com.hmall.mapper.OrderMapper.insert      : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+09:40:13:809 DEBUG 31488 --- [http-nio-8080-exec-3] com.hmall.mapper.OrderMapper.insert      : ==> Parameters: 1951095593730932737(Long), 144600(Integer), 3(Integer), 1(Long), 1(Integer)
+09:40:13:811 DEBUG 31488 --- [http-nio-8080-exec-3] com.hmall.mapper.OrderMapper.insert      : <==    Updates: 1
+09:40:13:811 DEBUG 31488 --- [http-nio-8080-exec-3] c.hmall.mapper.OrderDetailMapper.insert  : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+09:40:13:812 DEBUG 31488 --- [http-nio-8080-exec-3] c.hmall.mapper.OrderDetailMapper.insert  : ==> Parameters: 1951095593730932737(Long), 14741770661(Long), 1(Integer), 康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视(String), {}(String), 144600(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp(String)
+09:40:13:816 DEBUG 31488 --- [http-nio-8080-exec-3] com.hmall.mapper.CartMapper.delete       : ==>  Preparing: DELETE FROM cart WHERE (user_id = ? AND item_id IN (?))
+09:40:13:816 DEBUG 31488 --- [http-nio-8080-exec-3] com.hmall.mapper.CartMapper.delete       : ==> Parameters: 1(Long), 14741770661(Long)
+09:40:13:818 DEBUG 31488 --- [http-nio-8080-exec-3] com.hmall.mapper.CartMapper.delete       : <==    Updates: 0
+09:40:13:818 DEBUG 31488 --- [http-nio-8080-exec-3] com.hmall.mapper.ItemMapper.updateStock  : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+09:40:13:818 DEBUG 31488 --- [http-nio-8080-exec-3] com.hmall.mapper.ItemMapper.updateStock  : ==> Parameters: 1(Integer), 14741770661(Long)
+09:40:14:001 DEBUG 31488 --- [http-nio-8080-exec-9] com.hmall.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+09:40:14:001 DEBUG 31488 --- [http-nio-8080-exec-9] com.hmall.mapper.OrderMapper.selectById  : ==> Parameters: 1951095593730932737(Long)
+09:40:14:003 DEBUG 31488 --- [http-nio-8080-exec-9] com.hmall.mapper.OrderMapper.selectById  : <==      Total: 1
+09:40:14:020 DEBUG 31488 --- [http-nio-8080-exec-7] c.hmall.mapper.PayOrderMapper.selectOne  : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE (biz_order_no = ?)
+09:40:14:021 DEBUG 31488 --- [http-nio-8080-exec-7] c.hmall.mapper.PayOrderMapper.selectOne  : ==> Parameters: 1951095593730932737(Long)
+09:40:14:022 DEBUG 31488 --- [http-nio-8080-exec-7] c.hmall.mapper.PayOrderMapper.selectOne  : <==      Total: 0
+09:40:14:023 DEBUG 31488 --- [http-nio-8080-exec-7] com.hmall.mapper.PayOrderMapper.insert   : ==>  Preparing: INSERT INTO pay_order ( id, biz_order_no, pay_order_no, biz_user_id, pay_channel_code, amount, pay_type, status, pay_over_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+09:40:14:023 DEBUG 31488 --- [http-nio-8080-exec-7] com.hmall.mapper.PayOrderMapper.insert   : ==> Parameters: 1951095594590765059(Long), 1951095593730932737(Long), 1951095594590765058(Long), 1(Long), balance(String), 144600(Integer), 5(Integer), 1(Integer), 2025-08-01T11:40:14.022230300(LocalDateTime)
+09:40:14:026 DEBUG 31488 --- [http-nio-8080-exec-7] com.hmall.mapper.PayOrderMapper.insert   : <==    Updates: 1
+09:40:24:749 DEBUG 31488 --- [http-nio-8080-exec-8] c.hmall.mapper.AddressMapper.selectList  : ==>  Preparing: SELECT id,user_id,province,city,town,mobile,street,contact,is_default,notes FROM address WHERE (user_id = ?)
+09:40:24:749 DEBUG 31488 --- [http-nio-8080-exec-8] c.hmall.mapper.AddressMapper.selectList  : ==> Parameters: 1(Long)
+09:40:24:751 DEBUG 31488 --- [http-nio-8080-exec-8] c.hmall.mapper.AddressMapper.selectList  : <==      Total: 4
+09:40:30:209 DEBUG 31488 --- [http-nio-8080-exec-10] c.hmall.mapper.AddressMapper.selectList  : ==>  Preparing: SELECT id,user_id,province,city,town,mobile,street,contact,is_default,notes FROM address WHERE (user_id = ?)
+09:40:30:209 DEBUG 31488 --- [http-nio-8080-exec-10] c.hmall.mapper.AddressMapper.selectList  : ==> Parameters: 1(Long)
+09:40:30:211 DEBUG 31488 --- [http-nio-8080-exec-10] c.hmall.mapper.AddressMapper.selectList  : <==      Total: 4
+09:52:09:220  INFO 31488 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+09:52:09:237  INFO 31488 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
