@@ -1,0 +1,17 @@
+10:50:05:633  INFO 13492 --- [main] com.hmall.item.ItemApplication           : Starting ItemApplication using Java 11.0.12 on Mr-Y with PID 13492 (D:\future\Java\programeLearning\springcloud\hmall\item-service\target\classes started by crist yang in D:\future\Java\programeLearning\springcloud\hmall)
+10:50:05:635 DEBUG 13492 --- [main] com.hmall.item.ItemApplication           : Running with Spring Boot v2.7.12, Spring v5.3.27
+10:50:05:636  INFO 13492 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+10:50:06:563  INFO 13492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+10:50:06:569  INFO 13492 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+10:50:06:571  INFO 13492 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+10:50:06:644  INFO 13492 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+10:50:06:644  INFO 13492 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 975 ms
+10:50:08:140  INFO 13492 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+10:50:08:187  INFO 13492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+10:50:08:188  INFO 13492 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+10:50:08:189  INFO 13492 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+10:50:08:204  INFO 13492 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+10:50:08:276  INFO 13492 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 2.972 seconds (JVM running for 4.217)
+10:50:13:000  INFO 13492 --- [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+10:50:13:001  INFO 13492 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+10:50:13:002  INFO 13492 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
