@@ -426,3 +426,97 @@ java.lang.IllegalStateException: The port must be an integer: 8083items
 19:03:25:180  INFO 12108 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
 19:03:25:194  INFO 12108 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
 19:03:25:246  INFO 12108 --- [main] com.hmall.cart.CartApplication           : Started CartApplication in 10.055 seconds (JVM running for 11.147)
+19:16:56:649  WARN 12108 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+19:16:56:649  WARN 12108 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+19:16:56:650  WARN 12108 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+19:16:56:650  WARN 12108 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+19:16:57:238  INFO 12108 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+19:16:57:240  INFO 12108 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+19:16:57:568  INFO 12108 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+19:16:57:568  INFO 12108 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@6bd2aa6[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+19:16:57:568  INFO 12108 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1754046204635_192.168.126.1_6038
+19:16:57:570  INFO 12108 --- [nacos-grpc-client-executor-182] c.a.n.c.remote.client.grpc.GrpcClient    : [1754046204635_192.168.126.1_6038]Ignore complete event,isRunning:false,isAbandon=false
+19:16:57:573  INFO 12108 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@41323cd3[Running, pool size = 6, active threads = 0, queued tasks = 0, completed tasks = 183]
+19:17:05:789  INFO 34812 --- [main] com.hmall.cart.CartApplication           : Starting CartApplication using Java 11.0.12 on Mr-Y with PID 34812 (D:\future\Java\programeLearning\springcloud\hmall\cart-service\target\classes started by crist yang in D:\future\Java\programeLearning\springcloud\hmall)
+19:17:05:790 DEBUG 34812 --- [main] com.hmall.cart.CartApplication           : Running with Spring Boot v2.7.12, Spring v5.3.27
+19:17:05:791  INFO 34812 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
+19:17:06:473  INFO 34812 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d76ff9ca-3fb8-3f1b-b99b-197d0bcae944
+19:17:06:696  INFO 34812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+19:17:06:701  INFO 34812 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+19:17:06:701  INFO 34812 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+19:17:06:807  INFO 34812 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+19:17:06:808  INFO 34812 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 990 ms
+19:17:06:943  INFO 34812 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+19:17:10:110  INFO 34812 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+19:17:11:007  INFO 34812 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 8875250a-436c-4824-8953-70f7a15e95f4
+19:17:11:033  INFO 34812 --- [main] org.reflections.Reflections              : Reflections took 14 ms to scan 1 urls, producing 3 keys and 6 values 
+19:17:11:049  INFO 34812 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 4 keys and 9 values 
+19:17:11:062  INFO 34812 --- [main] org.reflections.Reflections              : Reflections took 10 ms to scan 1 urls, producing 3 keys and 10 values 
+19:17:11:065  WARN 34812 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+19:17:11:069  INFO 34812 --- [main] org.reflections.Reflections              : Reflections took 4 ms to scan 1 urls, producing 1 keys and 5 values 
+19:17:11:076  INFO 34812 --- [main] org.reflections.Reflections              : Reflections took 4 ms to scan 1 urls, producing 1 keys and 7 values 
+19:17:11:082  INFO 34812 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 2 keys and 8 values 
+19:17:11:082  WARN 34812 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+19:17:11:083  INFO 34812 --- [main] com.alibaba.nacos.common.remote.client   : [8875250a-436c-4824-8953-70f7a15e95f4] RpcClient init label, labels = {module=naming, source=sdk}
+19:17:11:084  INFO 34812 --- [main] com.alibaba.nacos.common.remote.client   : [8875250a-436c-4824-8953-70f7a15e95f4] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+19:17:11:084  INFO 34812 --- [main] com.alibaba.nacos.common.remote.client   : [8875250a-436c-4824-8953-70f7a15e95f4] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+19:17:11:085  INFO 34812 --- [main] com.alibaba.nacos.common.remote.client   : [8875250a-436c-4824-8953-70f7a15e95f4] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+19:17:11:086  INFO 34812 --- [main] com.alibaba.nacos.common.remote.client   : [8875250a-436c-4824-8953-70f7a15e95f4] Try to connect to server on start up, server: {serverIp = '192.168.126.131', server main port = 8848}
+19:17:13:520  INFO 34812 --- [main] com.alibaba.nacos.common.remote.client   : [8875250a-436c-4824-8953-70f7a15e95f4] Success to connect to server [192.168.126.131:8848] on start up, connectionId = 1754047033807_192.168.126.1_2774
+19:17:13:521  INFO 34812 --- [main] com.alibaba.nacos.common.remote.client   : [8875250a-436c-4824-8953-70f7a15e95f4] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+19:17:13:522  INFO 34812 --- [main] com.alibaba.nacos.common.remote.client   : [8875250a-436c-4824-8953-70f7a15e95f4] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$989/0x000000080079d440
+19:17:13:521  INFO 34812 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [8875250a-436c-4824-8953-70f7a15e95f4] Notify connected event to listeners.
+19:17:13:566  INFO 34812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+19:17:13:574  INFO 34812 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP cart-service 192.168.1.4:8082 register finished
+19:17:14:129  INFO 34812 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [8875250a-436c-4824-8953-70f7a15e95f4] Receive server push request, request = NotifySubscriberRequest, requestId = 15
+19:17:14:133  INFO 34812 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [8875250a-436c-4824-8953-70f7a15e95f4] Ack server push request, request = NotifySubscriberRequest, requestId = 15
+19:17:14:449  INFO 34812 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+19:17:14:451  INFO 34812 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+19:17:14:470  INFO 34812 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+19:17:14:538  INFO 34812 --- [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:17:14:538  INFO 34812 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+19:17:14:539  INFO 34812 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+19:17:14:543  INFO 34812 --- [main] com.hmall.cart.CartApplication           : Started CartApplication in 10.134 seconds (JVM running for 11.404)
+19:17:14:605  INFO 34812 --- [http-nio-8082-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+19:17:14:830  INFO 34812 --- [http-nio-8082-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+19:17:14:834 DEBUG 34812 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+19:17:14:847 DEBUG 34812 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+19:17:14:863 DEBUG 34812 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+19:17:15:530  INFO 34812 --- [nacos-grpc-client-executor-12] com.alibaba.nacos.common.remote.client   : [8875250a-436c-4824-8953-70f7a15e95f4] Receive server push request, request = NotifySubscriberRequest, requestId = 16
+19:17:15:531  INFO 34812 --- [nacos-grpc-client-executor-12] com.alibaba.nacos.common.remote.client   : [8875250a-436c-4824-8953-70f7a15e95f4] Ack server push request, request = NotifySubscriberRequest, requestId = 16
+19:17:16:210 DEBUG 34812 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+19:17:16:211 DEBUG 34812 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+19:17:16:212 DEBUG 34812 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+19:17:16:802 DEBUG 34812 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+19:17:16:802 DEBUG 34812 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+19:17:16:804 DEBUG 34812 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+19:17:16:953 DEBUG 34812 --- [http-nio-8082-exec-9] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+19:17:16:954 DEBUG 34812 --- [http-nio-8082-exec-9] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+19:17:16:955 DEBUG 34812 --- [http-nio-8082-exec-9] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+19:17:17:086 DEBUG 34812 --- [http-nio-8082-exec-4] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+19:17:17:086 DEBUG 34812 --- [http-nio-8082-exec-4] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+19:17:17:088 DEBUG 34812 --- [http-nio-8082-exec-4] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+19:17:17:362 DEBUG 34812 --- [http-nio-8082-exec-6] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+19:17:17:363 DEBUG 34812 --- [http-nio-8082-exec-6] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+19:17:17:365 DEBUG 34812 --- [http-nio-8082-exec-6] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+19:17:17:521 DEBUG 34812 --- [http-nio-8082-exec-7] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+19:17:17:521 DEBUG 34812 --- [http-nio-8082-exec-7] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+19:17:17:537 DEBUG 34812 --- [http-nio-8082-exec-7] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+19:17:17:671 DEBUG 34812 --- [http-nio-8082-exec-8] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+19:17:17:671 DEBUG 34812 --- [http-nio-8082-exec-8] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+19:17:17:673 DEBUG 34812 --- [http-nio-8082-exec-8] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+19:17:17:821 DEBUG 34812 --- [http-nio-8082-exec-5] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+19:17:17:821 DEBUG 34812 --- [http-nio-8082-exec-5] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+19:17:17:822 DEBUG 34812 --- [http-nio-8082-exec-5] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+19:17:17:973 DEBUG 34812 --- [http-nio-8082-exec-10] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+19:17:17:973 DEBUG 34812 --- [http-nio-8082-exec-10] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+19:17:17:975 DEBUG 34812 --- [http-nio-8082-exec-10] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+19:17:18:120 DEBUG 34812 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+19:17:18:120 DEBUG 34812 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+19:17:18:122 DEBUG 34812 --- [http-nio-8082-exec-2] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+19:17:18:389 DEBUG 34812 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+19:17:18:389 DEBUG 34812 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+19:17:18:391 DEBUG 34812 --- [http-nio-8082-exec-1] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+19:17:18:564 DEBUG 34812 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+19:17:18:565 DEBUG 34812 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+19:17:18:567 DEBUG 34812 --- [http-nio-8082-exec-3] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
