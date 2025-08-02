@@ -2,3 +2,9 @@ hm:
   db:
     host: mysql
     pw: 123
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: nacos
