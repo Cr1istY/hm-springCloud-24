@@ -3589,3 +3589,81 @@ java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 4 millisec
 15:02:53:723 DEBUG 36488 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
 15:02:53:725 DEBUG 36488 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
 15:02:53:758 DEBUG 36488 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:29:34:367 DEBUG 36488 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:29:34:371 DEBUG 36488 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+18:29:34:378 DEBUG 36488 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:29:44:346 DEBUG 34704 --- [http-nio-8083-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:29:44:349 DEBUG 34704 --- [http-nio-8083-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+18:29:44:372 DEBUG 34704 --- [http-nio-8083-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:29:45:511 DEBUG 34704 --- [http-nio-8083-exec-6] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:29:45:511 DEBUG 34704 --- [http-nio-8083-exec-6] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+18:29:45:522 DEBUG 34704 --- [http-nio-8083-exec-6] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:30:00:381 DEBUG 36488 --- [http-nio-8081-exec-8] c.h.i.m.ItemMapper.selectPage_mpCount    : ==>  Preparing: SELECT COUNT(*) FROM item WHERE (status = ?)
+18:30:00:381 DEBUG 36488 --- [http-nio-8081-exec-8] c.h.i.m.ItemMapper.selectPage_mpCount    : ==> Parameters: 1(Integer)
+18:30:00:409 DEBUG 36488 --- [http-nio-8081-exec-8] c.h.i.m.ItemMapper.selectPage_mpCount    : <==      Total: 1
+18:30:00:414 DEBUG 36488 --- [http-nio-8081-exec-8] c.h.item.mapper.ItemMapper.selectPage    : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+18:30:00:414 DEBUG 36488 --- [http-nio-8081-exec-8] c.h.item.mapper.ItemMapper.selectPage    : ==> Parameters: 1(Integer), 20(Long)
+18:30:00:418 DEBUG 36488 --- [http-nio-8081-exec-8] c.h.item.mapper.ItemMapper.selectPage    : <==      Total: 20
+18:30:02:707 DEBUG 34704 --- [http-nio-8083-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:30:02:708 DEBUG 34704 --- [http-nio-8083-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 14741770661(Long)
+18:30:02:713 DEBUG 34704 --- [http-nio-8083-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:30:09:565 DEBUG 34704 --- [http-nio-8083-exec-8] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:30:09:565 DEBUG 34704 --- [http-nio-8083-exec-8] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 14741770661(Long)
+18:30:09:567 DEBUG 34704 --- [http-nio-8083-exec-8] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:30:09:700  WARN 36488 --- [http-nio-8081-exec-6] c.h.item.service.impl.ItemServiceImpl    : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70cfbf86] Transaction not enabled
+18:30:09:702 DEBUG 36488 --- [http-nio-8081-exec-6] c.h.item.mapper.ItemMapper.updateStock   : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+18:30:09:703 DEBUG 36488 --- [http-nio-8081-exec-6] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 1(Integer), 14741770661(Long)
+18:30:53:502 DEBUG 34704 --- [http-nio-8083-exec-9] c.h.i.m.ItemMapper.selectPage_mpCount    : ==>  Preparing: SELECT COUNT(*) FROM item WHERE (status = ?)
+18:30:53:503 DEBUG 34704 --- [http-nio-8083-exec-9] c.h.i.m.ItemMapper.selectPage_mpCount    : ==> Parameters: 1(Integer)
+18:30:53:517 DEBUG 34704 --- [http-nio-8083-exec-9] c.h.i.m.ItemMapper.selectPage_mpCount    : <==      Total: 1
+18:30:53:519 DEBUG 34704 --- [http-nio-8083-exec-9] c.h.item.mapper.ItemMapper.selectPage    : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+18:30:53:520 DEBUG 34704 --- [http-nio-8083-exec-9] c.h.item.mapper.ItemMapper.selectPage    : ==> Parameters: 1(Integer), 20(Long)
+18:30:53:530 DEBUG 34704 --- [http-nio-8083-exec-9] c.h.item.mapper.ItemMapper.selectPage    : <==      Total: 20
+18:30:55:429 DEBUG 36488 --- [http-nio-8081-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:30:55:430 DEBUG 36488 --- [http-nio-8081-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long)
+18:30:55:434 DEBUG 36488 --- [http-nio-8081-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:31:01:456 DEBUG 36488 --- [http-nio-8081-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:31:01:457 DEBUG 36488 --- [http-nio-8081-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long)
+18:31:01:459 DEBUG 36488 --- [http-nio-8081-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:31:01:526  WARN 34704 --- [http-nio-8083-exec-10] c.h.item.service.impl.ItemServiceImpl    : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@461ef8ff] Transaction not enabled
+18:31:01:528 DEBUG 34704 --- [http-nio-8083-exec-10] c.h.item.mapper.ItemMapper.updateStock   : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+18:31:01:529 DEBUG 34704 --- [http-nio-8083-exec-10] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 1(Integer), 8533120(Long)
+18:57:18:639 DEBUG 36488 --- [http-nio-8081-exec-5] c.h.i.m.ItemMapper.selectPage_mpCount    : ==>  Preparing: SELECT COUNT(*) FROM item WHERE (status = ?)
+18:57:18:640 DEBUG 36488 --- [http-nio-8081-exec-5] c.h.i.m.ItemMapper.selectPage_mpCount    : ==> Parameters: 1(Integer)
+18:57:18:668 DEBUG 36488 --- [http-nio-8081-exec-5] c.h.i.m.ItemMapper.selectPage_mpCount    : <==      Total: 1
+18:57:18:670 DEBUG 36488 --- [http-nio-8081-exec-5] c.h.item.mapper.ItemMapper.selectPage    : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+18:57:18:670 DEBUG 36488 --- [http-nio-8081-exec-5] c.h.item.mapper.ItemMapper.selectPage    : ==> Parameters: 1(Integer), 20(Long)
+18:57:18:674 DEBUG 36488 --- [http-nio-8081-exec-5] c.h.item.mapper.ItemMapper.selectPage    : <==      Total: 20
+18:57:21:242 DEBUG 34704 --- [http-nio-8083-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:57:21:243 DEBUG 34704 --- [http-nio-8083-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 2120808(Long)
+18:57:21:250 DEBUG 34704 --- [http-nio-8083-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:57:26:684 DEBUG 34704 --- [http-nio-8083-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:57:26:685 DEBUG 34704 --- [http-nio-8083-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 2120808(Long)
+18:57:26:699 DEBUG 34704 --- [http-nio-8083-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:57:26:746  WARN 36488 --- [http-nio-8081-exec-1] c.h.item.service.impl.ItemServiceImpl    : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@740cd15d] Transaction not enabled
+18:57:26:747 DEBUG 36488 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.updateStock   : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+18:57:26:748 DEBUG 36488 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 1(Integer), 2120808(Long)
+19:01:02:406 DEBUG 34704 --- [http-nio-8083-exec-8] c.h.i.m.ItemMapper.selectPage_mpCount    : ==>  Preparing: SELECT COUNT(*) FROM item WHERE (status = ?)
+19:01:02:406 DEBUG 34704 --- [http-nio-8083-exec-8] c.h.i.m.ItemMapper.selectPage_mpCount    : ==> Parameters: 1(Integer)
+19:01:02:418 DEBUG 34704 --- [http-nio-8083-exec-8] c.h.i.m.ItemMapper.selectPage_mpCount    : <==      Total: 1
+19:01:02:419 DEBUG 34704 --- [http-nio-8083-exec-8] c.h.item.mapper.ItemMapper.selectPage    : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+19:01:02:420 DEBUG 34704 --- [http-nio-8083-exec-8] c.h.item.mapper.ItemMapper.selectPage    : ==> Parameters: 1(Integer), 20(Long)
+19:01:02:422 DEBUG 34704 --- [http-nio-8083-exec-8] c.h.item.mapper.ItemMapper.selectPage    : <==      Total: 20
+19:01:04:270 DEBUG 36488 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+19:01:04:270 DEBUG 36488 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 14741770661(Long)
+19:01:04:278 DEBUG 36488 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+19:01:09:007 DEBUG 34704 --- [http-nio-8083-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+19:01:09:008 DEBUG 34704 --- [http-nio-8083-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 14741770661(Long)
+19:01:09:009 DEBUG 34704 --- [http-nio-8083-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+19:01:09:025  WARN 36488 --- [http-nio-8081-exec-7] c.h.item.service.impl.ItemServiceImpl    : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e44c4c1] Transaction not enabled
+19:01:09:026 DEBUG 36488 --- [http-nio-8081-exec-7] c.h.item.mapper.ItemMapper.updateStock   : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+19:01:09:026 DEBUG 36488 --- [http-nio-8081-exec-7] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 1(Integer), 14741770661(Long)
+19:33:47:012 DEBUG 36488 --- [http-nio-8081-exec-10] c.h.i.m.ItemMapper.selectPage_mpCount    : ==>  Preparing: SELECT COUNT(*) FROM item WHERE (status = ?)
+19:33:47:015 DEBUG 36488 --- [http-nio-8081-exec-10] c.h.i.m.ItemMapper.selectPage_mpCount    : ==> Parameters: 1(Integer)
+19:33:47:043 DEBUG 36488 --- [http-nio-8081-exec-10] c.h.i.m.ItemMapper.selectPage_mpCount    : <==      Total: 1
+19:33:47:045 DEBUG 36488 --- [http-nio-8081-exec-10] c.h.item.mapper.ItemMapper.selectPage    : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+19:33:47:046 DEBUG 36488 --- [http-nio-8081-exec-10] c.h.item.mapper.ItemMapper.selectPage    : ==> Parameters: 1(Integer), 20(Long)
+19:33:47:052 DEBUG 36488 --- [http-nio-8081-exec-10] c.h.item.mapper.ItemMapper.selectPage    : <==      Total: 20
+19:33:50:241 DEBUG 34704 --- [http-nio-8083-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+19:33:50:244 DEBUG 34704 --- [http-nio-8083-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 40305713537(Long)
+19:33:50:247 DEBUG 34704 --- [http-nio-8083-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
