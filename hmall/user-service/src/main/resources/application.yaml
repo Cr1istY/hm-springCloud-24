@@ -11,10 +11,8 @@ spring:
     username: root
     password: ${hm.db.pw}
   cloud:
-    loadbalancer:
-      nacos:
-        enabled: true
-        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+    nacos:
+      server-addr: ${spring.cloud.nacos.discovery.server-addr}
 mybatis-plus:
   configuration:
     default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
